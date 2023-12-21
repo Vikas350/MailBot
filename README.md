@@ -1,6 +1,6 @@
 # MailBot - Auto Reply Gmail Bot using Node.js 
 
-Description
+# Description
 - This app is able to respond to emails sent to your Gmail mailbox while you’re out on a vacation. This is developed uisng Node.js and Google Authentication.
 
 Features
