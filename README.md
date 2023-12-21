@@ -1,22 +1,19 @@
 # MailBot - Auto Reply Gmail Bot using Node.js 
 
 Description
-- This is a repository for Auto_reply_gmail_api_app App Developed using Node.js and Google APIs.
-- This app  is able to respond to emails sent to your Gmail mailbox while you’re out on a vacation.
+- This app is able to respond to emails sent to your Gmail mailbox while you’re out on a vacation. This is developed uisng Node.js and Google Authentication.
 
- Features
+Features
 - Checks for new emails in a given Gmail ID.
 - Sends replies to emails that have no prior replies.
 - Adds a label to the email and moves the email to the label.
 - This app checks above steps every 45 to 120 in b/w sec  random time interval. 
 
- Libraries  
--1.googleapis:This package is imported from the googleapis module and provides the necessary functionality to interact
-   with various Google APIs, including the Gmail API.
--2.OAuth2:The OAuth2 class from the google.auth module is used to authenticate the application and obtain an access
-   token for making requests to the Gmail API. It handles token refresh and retrying requests if necessary. 
+Libraries  
+- googleapis: This package is imported from the googleapis module and provides the necessary functionality to interact with various Google APIs, including the Gmail API.
+- OAuth2:The OAuth2 class from the google.auth module is used to authenticate the application and obtain an access token for making requests to the Gmail API. It handles token refresh and retrying requests if necessary. 
 
- Getting Started
+Getting Started
 
 First Thing to do go to Google Cloud Console and set up the OAuth 2.0 authentication for
 your application, follow these steps:
@@ -53,7 +50,6 @@ your application, follow these steps:
 The easiest way to get started is to clone the repository:
 ```bash
 # Get the latest snapshot
-git clone https://github.com/Sahil-Sayyad/Auto_reply_gmail_api_app.git
 
 # Install NPM dependencies
 npm install
@@ -65,20 +61,4 @@ npm install googleapis nodemon
 npm start
 ```
 
-# LINKS
-
-<h3> <a href = "https://github.com/Sahil-Sayyad/Auto_reply_gmail_api_app"> CODE</a> </h3><br>
-
-
-note on areas where your code can be improved.
-1.Error handling: The code currently logs any errors that occur during the execution but does not
-  handle them in a more robust manner.
-2.Code efficiency: The code could be optimized to handle larger volumes of emails more efficiently.
-3.Security: Ensuring that sensitive information, such as client secrets and refresh tokens, are stored
-  securely and not exposed in the   code.
-4.User-specific configuration: Making the code more flexible by allowing users to provide their own
-  configuration options, such as email    filters or customized reply messages.
-  These are some areas where the code can be improved, but overall, it provides implementation of
-  auto-reply functionality using the Gmail API.
-5.Time Monitoring: The code currently use randominterval function to generate seconds and in this code can be improved by adding cron jobs package to schedule email tasks 
 
