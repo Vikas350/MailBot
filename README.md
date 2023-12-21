@@ -3,62 +3,50 @@
 ## Description
 - This app is able to respond to emails sent to your Gmail mailbox while you’re out on a vacation. This is developed uisng Node.js and Google Authentication.
 
-Features
+## Features
 - Checks for new emails in a given Gmail ID.
 - Sends replies to emails that have no prior replies.
 - Adds a label to the email and moves the email to the label.
 - This app checks above steps every 45 to 120 in b/w sec  random time interval. 
 
-Libraries  
+## Libraries  
 - googleapis: This package is imported from the googleapis module and provides the necessary functionality to interact with various Google APIs, including the Gmail API.
 - OAuth2:The OAuth2 class from the google.auth module is used to authenticate the application and obtain an access token for making requests to the Gmail API. It handles token refresh and retrying requests if necessary. 
 
-Getting Started
+## Getting Started
+To start the project follow these steps - 
 
-First Thing to do go to Google Cloud Console and set up the OAuth 2.0 authentication for
-your application, follow these steps:
-1. Go to the Google Cloud Console (https://console.developers.google.com) and create a new project. Provide a
-   suitable name for your project and click on the "Create" button.
-2. Once the project is created, click on the project name to navigate to the project dashboard.
-3. In the left sidebar, click on the "Credentials" tab under the "APIs & Services" section.
-4. On the Credentials page, click on the "Create credentials" button and select "OAuth client ID" from the
-   dropdown menu.
-5. Select the application type as "Web application" and provide a name for the OAuth 2.0 client ID.
-6. In the "Authorized redirect URIs" field, enter the redirect URI where you want to receive the authorization
-   code. For this code, you can use "https://developers.google.com/oauthplayground".
-8. Click on the "Create" button to create the OAuth client ID. You will see a modal displaying the client ID
-   and client secret. Copy the values of the client ID and client secret. and also enable gmail api 
-9. Now, open the OAuth 2.0 Playground (https://developers.google.com/oauthplayground).
-10.In the OAuth 2.0 Playground, click on the settings icon (gear icon) on the top right corner. In the
-   "OAuth 2.0 configuration" section, enter the client ID and client secret obtained in the previous step.
-11.Scroll down and find the "Step 1: Select & authorize APIs" section. In the input box, enter `https://mail.google.com`
-   and select the appropriate Gmail API scope.
-12.Click on the "Authorize APIs" button. It will redirect you to the Google account login page. Sign in with the
-   Google account associated with the Gmail account you want to use for auto-reply.
-13.After successful authorization, the OAuth 2.0 Playground will display an authorization code. Copy this code.
-14.Now, click on the "Exchange authorization code for tokens" button. It will exchange the authorization code for
-   a refresh token.
-15.The OAuth 2.0 Playground will display the refresh token. Copy the refresh token value.
-16.Now, in your code, replace the placeholder values in the `credentials.js` file with the respective values
-   you obtained:
-   Replace CLIENT_ID with the client ID value.
-   Replace CLEINT_SECRET with the client secret value.
-   Replace REDIRECT_URI with the redirect URI value.
-   Replace REFRESH_TOKEN with the refresh token value.
-17.Save the credentials.js file.
-
-The easiest way to get started is to clone the repository:
+1. Download the Source Code Zip file From the Github
+2. Unzip the file and open in any IDE
+3. Now run these commands in the Terminal - 
 ```bash
-# Get the latest snapshot
-
 # Install NPM dependencies
 npm install
 
 #Install googleapis and nodemon
 npm install googleapis nodemon
+```
+4. Now we need to generate the Google OAuth Credentials, For that follow these steps - 
+- Go to the Google Cloud Console (https://console.developers.google.com) and create a new project. Provide a suitable name for your project and click on the "Create" button.
+- Once the project is created, click on the project name to navigate to the project dashboard.
+- In the left sidebar, click on the "Credentials" tab under the "APIs & Services" section.
+- Before further steps, you have to provide the OAuth Consent under the "OAuth Consent Screen" section.
+- Now select the application type as "Web application" and provide a name for the OAuth 2.0 client ID.
+- In the "Authorized redirect URIs" field, enter the redirect URI where you want to receive the authorization code.
+- Click on the "Create" button to create the OAuth client ID. You will see a modal displaying the client ID and client secret.
+- Now Download the Credentials JSON file from here and put into our code as "Credentials.json".
+- Now at the end Create a test User for our application in the "APIs & Services" section.
+- Also enable the Gmail API from the "Library" section.
 
-# Then simply start your app
+5. Now run this command in terminal
+```bash
+# Simply start your app
 npm start
 ```
+6. Now open browser and type url (http://localhost:8080), and enter this will open a new tab for login.
+7. Login with the test user email which you created earlier.
+8. All Steps Done.
+
+
 
 
